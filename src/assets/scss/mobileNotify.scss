@@ -1,0 +1,119 @@
+$backgroundWhite : #fff;
+$backgroundGray : #F8F9FA;
+$gradation: linear-gradient(40deg, rgba(242, 76, 249, 1) 0%, rgba(160, 74, 255, 1) 31%, rgba(36, 94, 255, 1) 69%, rgba(48, 177, 255, 1) 100%);
+$active : #6F64FF;
+$unactive: #B5B9BD;
+$white: #FFFFFF;
+$notify: #E833BB;
+$Gray200 : #ECEEF0;
+$Gray300 :#E2E5E8;
+$Gray400 :#D4D8DC;
+$Gray500 :#B5B9BD;
+$Gray600 : #8E9398;
+$Gray700 : #505458;
+$Gray800: #3A3D40;
+$Gray900 : #252729;
+$FontSize40 : 10.6vw;
+$FontSize32 : 8.5vw;
+$FontSize24 : 6.4vw;
+$FontSize20 : 5.3vw;
+$FontSize16 : 4.2vw;
+$FontSize14 : 3.7vw;
+$FontSize12 : 3.2vw;
+$FontSize10 : 2.6vw;
+
+.notify {
+    margin-top: $FontSize20;
+    min-height: 80vh;
+
+     .notifyHeader {
+         gap: $FontSize12;
+         margin-bottom: 12vw;
+
+         button {
+             background-color: transparent;
+             border: none;
+             padding: 0;
+
+             i {
+                 font-size: $FontSize16;
+                 color: $Gray700;
+             }
+         }
+
+         h5 {
+             font-size: $FontSize20;
+             margin-bottom: 0;
+             font-weight: 700;
+             color: $Gray700;
+         }
+     }
+
+     .list {
+        margin-top: 9.86vw;
+
+        ul {
+            padding-left: 0;
+            gap: $FontSize14;
+
+            li {
+                text-align: left;
+                border-bottom: 1px solid $Gray200;
+
+                &:first-child {
+                    h5 {
+                        span {
+                            display: block;
+                            color: #E833BB;
+                            font-size: $FontSize16;
+                            font-weight: 900;
+                        }
+                    }
+                }
+                
+
+                h5 {
+                    font-size: $FontSize16;
+                    color: $Gray900;
+                    font-weight: 700;
+                    margin-bottom: 1.6vw;
+                    gap: 1.6vw;
+
+                    span {
+                        display: none;
+                    }
+                }
+                p {
+                    font-size: $FontSize14;
+                    color: $Gray900;
+                    font-weight: 400;
+                    margin-bottom: $FontSize14
+                }
+            }
+        }
+     }
+     .board {
+        width: 95%;
+        margin: 0 auto;
+        text-align: left;
+
+        h3 {
+            font-size: $FontSize20;
+            color: $Gray900;
+            font-weight: 700;
+            margin-bottom: 2.1vw;
+        }
+        h6 {
+            font-size: $FontSize12;
+            color: $Gray600;
+            font-weight: 400;
+            margin-bottom: $FontSize16;
+        }
+        p {
+            font-size: $FontSize14;
+            color: $Gray900;
+            line-height: $FontSize20;
+            font-weight: 400;
+        }
+     }
+}

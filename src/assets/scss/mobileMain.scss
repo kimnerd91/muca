@@ -1,0 +1,672 @@
+$backgroundWhite : #fff;
+$backgroundGray : #F8F9FA;
+$gradation: linear-gradient(40deg, rgba(242, 76, 249, 1) 0%, rgba(160, 74, 255, 1) 31%, rgba(36, 94, 255, 1) 69%, rgba(48, 177, 255, 1) 100%);
+$active : #6F64FF;
+$unactive: #B5B9BD;
+$white: #FFFFFF;
+$notify: #E833BB;
+$Gray200 : #ECEEF0;
+$Gray300 :#E2E5E8;
+$Gray400 :#D4D8DC;
+$Gray500 :#B5B9BD;
+$Gray600 : #8E9398;
+$Gray700 : #505458;
+$Gray800: #3A3D40;
+$Gray900 : #252729;
+$FontSize40 : 10.6vw;
+$FontSize32 : 8.5vw;
+$FontSize24 : 6.4vw;
+$FontSize20 : 5.3vw;
+$FontSize18 : 4.8vw;
+$FontSize16 : 4.2vw;
+$FontSize14 : 3.7vw;
+$FontSize12 : 3.2vw;
+$FontSize10 : 2.6vw;
+$FontSize8 : 2.1vw;
+
+@media screen and (max-width:767px) {
+
+    // 바텀 메뉴 시작 // 
+    .fixedNav {
+        background-color: $white;
+        z-index: 999;
+        position: sticky;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 36.8VW;
+        padding: 0 0 $FontSize16 0;
+        border-radius: 20px 20px 0 0;
+        box-shadow: 0px -2px 5px 0px rgba(0, 0, 0, 0.02),
+            0px -10px 10px 0px rgba(0, 0, 0, 0.02),
+            0px -22px 14px 0px rgba(0, 0, 0, 0.01),
+            0px -40px 16px 0px rgba(0, 0, 0, 0.00),
+            0px -63px 17px 0px rgba(0, 0, 0, 0.00);
+
+        ul {
+            padding: $FontSize16 0;
+
+            li {
+                i {
+                    font-size: $FontSize24;
+                    color: $unactive;
+                }
+
+                i &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: $gradation;
+                    z-index: -1;
+                    opacity: 0;
+                    /* 초기에는 가상 요소를 숨김 */
+                    transition: opacity 0.3s ease;
+                    /* 트랜지션 효과 추가 */
+                }
+            }
+
+            i.active {
+                background: $gradation;
+                /* 그라데이션 색상 설정 */
+                -webkit-background-clip: text;
+                background-clip: text;
+
+                /* 텍스트에만 그라데이션 적용 */
+                color: transparent;
+                /* 텍스트의 실제 색상은 투명하게 설정 */
+                display: inline-block;
+                /* 인라인 텍스트에 그라데이션 적용을 위해 필요한 설정 */
+            }
+        }
+    }
+
+    // 바텀 메뉴 끝 //
+
+
+    // 메인 상단 시작 //
+    .mainNav {
+        margin: $FontSize20 0;
+
+        span {
+            position: relative;
+            border-radius: 100px;
+            color: transparent;
+            line-height: 2;
+            padding: 2.1vw $FontSize16;
+            font-size: calc(2vw + 2px);
+            line-height: 1.6;
+            background: $gradation;
+            background-clip: text;
+            -webkit-background-clip: text;
+            border: 1px solid transparent;
+            border-image: $gradation;
+            border-image-slice: 10;
+            border-image-repeat: stretch;
+            font-weight: 400;
+
+
+            &:before {
+                content: attr(data-text);
+
+            }
+        }
+
+        i {
+            font-size: $FontSize24;
+            color: $Gray700;
+        }
+    }
+
+    // 메인 상단 끝 // 
+    // 메인 탭 시작 //
+    .maintab {
+        ul {
+            li {
+                padding: $FontSize10 $FontSize14;
+
+                i {
+                    font-size: $FontSize24;
+                    color: $unactive;
+
+
+                }
+
+                i.active {
+                    color: $active;
+                }
+            }
+        }
+
+        .custom-select {
+            position: relative;
+            display: inline-block;
+        }
+
+        .custom-select-trigger {
+            padding: 2.1vw $FontSize16;
+            border: 1px solid transparent;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            font-size: $FontSize12;
+            font-weight: 400;
+            font-family: 'Pretendard-Regular';
+            padding-right: 0;
+        }
+
+        .custom-options {
+            display: block;
+            position: absolute;
+            top: 105%;
+            left: -20%;
+            right: 0;
+            border: 1px solid transparent;
+            border-top: none;
+            border-radius: 0 0 5px 5px;
+            background-color: #fff;
+            z-index: 999;
+            box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+            width: 130%;
+            font-size: $FontSize12;
+
+            .active i {
+                color: $active;
+            }
+        }
+
+        .custom-option {
+            padding: 2.1vw $FontSize16;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .custom-option:hover {
+            background-color: #f5f5f5;
+        }
+    }
+
+    // 메인 탭 끝 //
+
+    // 메인 앨범 블랭크 //
+
+    .mainCard {
+        margin-top: $FontSize20;
+        min-height: 70vh;
+        padding: 4vw 0;
+ 
+
+        .card_Blank {
+            padding: 0 $FontSize14;
+            border: 1px dashed $Gray600;
+            border-radius: 20px;
+            height: 135vw;
+            margin: 0 auto;
+
+
+
+            button {
+                border: none;
+                background-color: transparent;
+
+
+                p {
+                    font-size: $FontSize16;
+                    color: $Gray600;
+                }
+
+
+            }
+
+        }
+    }
+
+    // 메인 앨범 블랭크 끝 //
+
+    // 메인 앨범 슬라이드 시작 //
+
+
+
+    .card_slide {
+        padding: 0 $FontSize14;
+        border: 1px dashed $Gray600;
+        border-radius: 20px;
+        height: 135vw;
+        overflow-y: scroll;
+
+ 
+
+        button {
+            border: none;
+            background-color: transparent;
+
+
+            p {
+                font-size: $FontSize16;
+                color: $Gray600;
+            }
+
+
+        }
+
+
+    }
+
+    // 카드 슬라이드 끝 //
+
+    // 카드 리스트 시작 //
+
+    .card_list {
+        margin-top: $FontSize24;
+        height: 135vw;
+        overflow-y: scroll;
+
+        ul {
+            padding-left: 0;
+            display: flex;
+            flex-direction: column;
+            gap: $FontSize12;
+
+            a {
+                display: flex;
+                flex-direction: column;
+                gap: $FontSize16;
+            }
+
+            li {
+
+                margin-bottom: 6vw;
+                .cover {
+                    max-width: 21.3vw;
+                    max-height: 21.3vw;
+
+                }
+
+                img {
+                    width: 100%;
+                    border-radius: 10px;
+                }
+
+                .text {
+                    text-align: left;
+
+                    h5,
+                    h6,
+                    p {
+                        margin-bottom: 0;
+                    }
+
+                    h5,
+                    h6 {
+                        color: $Gray900;
+                    }
+
+                    p {
+                        color: $Gray600;
+                    }
+
+                    h5 {
+                        font-size: $FontSize20;
+                        font-weight: 700;
+                    }
+
+                    h6,
+                    p {
+                        font-size: $FontSize14;
+                        font-weight: 400;
+                    }
+
+                }
+
+            }
+        }
+
+
+
+    }
+
+    // 카드 리스트 끝 //
+
+    // 카드 그리드 시작 //
+
+    .card_Grid {
+        margin-top: $FontSize20;
+        height: 135vw;
+        overflow-y: scroll;
+
+
+        ul {
+            padding-left: 0;
+            display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+
+
+            a {
+                gap: $FontSize10;
+            }
+
+            li {
+                border-radius: 20px;
+                min-height: 61vw;
+                width: 43vw;
+                margin-bottom: 3vw;
+
+              .cover {
+                  width: 100%;
+                  height: 100%;
+                  overflow: hidden;
+                  border-radius: 18px;
+
+                  img {
+                      width: 100%;
+                      height: 100%;
+
+                  }
+              }
+
+                .opacity {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.3) 100%);
+                    border-radius: 20px;
+                }
+
+                .text {
+                    text-align: left;
+                    margin-bottom: $FontSize20;
+                    z-index: 99;
+
+                    h3 {
+                        font-size: $FontSize16;
+                        color: #fff;
+                        font-weight: 700;
+                        margin-bottom: 0;
+
+                    }
+
+                    p {
+                        font-size: $FontSize14;
+                        font-weight: 400;
+                        color: #fff;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+
+    }
+
+    // 카드 그리드 끝 //
+
+    // 플레이어 시작//
+
+    .playerBox {
+        z-index: 999;
+        background-color: $backgroundWhite;
+
+        backdrop-filter: blur(6px);
+
+        // box-shadow: 0px -2px 3px 0px rgba(0, 0, 0, 0.02),
+        //     0px -6px 6px 0px rgba(0, 0, 0, 0.02),
+        //     0px -14px 8px 0px rgba(0, 0, 0, 0.01),
+        //     0px -25px 10px 0px rgba(0, 0, 0, 0.00),
+        //     0px -39px 11px 0px rgba(0, 0, 0, 0.00);
+
+        .player {
+            background-color: $backgroundWhite;
+            padding: $FontSize12 $FontSize24 $FontSize12 $FontSize20;
+            border-radius: 20px 20px 0 0;
+
+            .InfoBox {
+                .CoverBox {
+                    .defalutImage {
+                        background-color: $Gray400;
+                        padding: $FontSize10;
+                        border-radius: 10px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        i {
+                            color: $unactive;
+                            font-size: $FontSize24;
+                        }
+                    }
+
+                    img {
+                        width: 11.7vw;
+                        height: 11.7vw;
+                        padding: 0;
+                        border-radius: 10px;
+                    }
+                }
+
+                p {
+                    margin-bottom: 0 !important;
+                    color: $Gray600;
+                    font-size: $FontSize16;
+                    font-weight: 500;
+                    font-family: 'Pretendard-Regular'
+                }
+            }
+
+            .controlBox {
+                button {
+                    border: none;
+                    background-color: transparent;
+
+                    i {
+                        font-size: $FontSize24;
+                        color: $Gray400;
+                        flex-shrink: 0;
+                    }
+                }
+            }
+
+        }
+    }
+
+    // 플레이어 끝 //
+
+    // 가이드 시작 //
+
+    .guideheader {
+        padding-top: $FontSize20;
+        position: absolute;
+
+        button {
+            border: none;
+            background-color: transparent;
+        }
+    }
+
+    .guide {
+        height: fit-content;
+        background-size: cover;
+        width: 100%;
+        padding-bottom: 0;
+
+        img {
+            padding-top: 10vw;
+        }
+
+        .custom-select {
+            position: relative;
+            display: inline-block;
+        }
+
+        .custom-select-trigger {
+            
+            border: 1px solid transparent;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          
+            font-size: $FontSize16;
+            font-weight: 400;
+            font-family: 'Pretendard-Regular';
+            padding-right: 0;
+        }
+
+        .custom-options {
+            display: block;
+            position: absolute;
+            top: 105%;
+            left: -20%;
+            right: 0;
+            border: 1px solid transparent;
+            border-top: none;
+            border-radius: 0 0 5px 5px;
+            background-color: #fff;
+            z-index: 999;
+            box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+            width: 130%;
+            font-size: $FontSize16;
+            padding: 1vw 3vw;
+
+            .active i {
+                color: $active;
+            }
+        }
+
+        .guideBtn {
+            position: absolute;
+            bottom: 3vh;
+            width: 100%;
+
+
+            button {
+                width: calc(100%);
+                height: 10.6vw;
+                gap: 6px;
+                background-color: $active;
+                color: $white;
+                border: none;
+                border-radius: 10px;
+                padding: 2.1vw 4.8vw;
+                position: sticky;
+                left: 20vw;
+                bottom: $FontSize20;
+                font-size: $FontSize16;
+                transition: 1s all;
+
+            }
+
+            button.active {
+                background-color: $active;
+            }
+        }
+    }
+
+    .qrcode {
+        background-color: rgba(0, 0, 0, 0.7);
+        filter: none;
+        padding-bottom: 15vw;
+
+        .qrheader {
+            padding-top: $FontSize20;
+            margin-bottom: 9.4vw;
+
+            button {
+                background-color: transparent;
+                border: none;
+                color: $white;
+
+                i {
+                    font-size: $FontSize20;
+                }
+            }
+        }
+
+        .scan {
+            text-align: center;
+
+            .camera {
+
+                width: 68.8vw;
+                height: 68.8vw;
+                border: 1px solid $white;
+                border-radius: 53px;
+                margin: 10vw 10.9vw;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .cameracross {
+                    width: 27.2vw;
+                    border: 3px solid black;
+                    border-left: none;
+                    border-right: none;
+                    height: 69vw;
+                    position: absolute;
+                }
+
+                .cameracross2 {
+                    width: 27.2vw;
+                    border: 3px solid black;
+                    border-left: none;
+                    border-right: none;
+                    height: 69.5vw;
+                    transform: rotate(-90deg);
+                    position: absolute;
+                }
+            }
+
+            p {
+                color: $white;
+                font-size: $FontSize18;
+                font-weight: 400;
+                line-height: 5.8vw;
+            }
+
+            .serial {
+                padding: $FontSize16 $FontSize16;
+                border: 1px solid $Gray300;
+                border-radius: 10px;
+                width: 100%;
+                margin-bottom: $FontSize24;
+
+                input {
+                    width: 11.2vw;
+                    height: $FontSize24;
+                    line-height: $FontSize24;
+                    text-align: center;
+                    background-color: transparent;
+                    color: $Gray400;
+                    border: none;
+                }
+            }
+
+            button {
+                width: calc(100%);
+                height: 15vw;
+                gap: 6px;
+                background-color: $white;
+                color: $Gray800;
+                border: none;
+                border-radius: 10px;
+                padding: 2.1vw 4.8vw;
+                position: sticky;
+                left: $FontSize20;
+                bottom: $FontSize20;
+                font-size: $FontSize16;
+                font-weight: 700;
+                transition: 1s all;
+
+            }
+        }
+
+    }
+}

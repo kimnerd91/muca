@@ -1,0 +1,434 @@
+$backgroundWhite : #fff;
+$backgroundGray : #F8F9FA;
+$gradation: linear-gradient(40deg, rgba(242, 76, 249, 1) 0%, rgba(160, 74, 255, 1) 31%, rgba(36, 94, 255, 1) 69%, rgba(48, 177, 255, 1) 100%);
+$active : #6F64FF;
+$unactive: #B5B9BD;
+$white: #FFFFFF;
+$notify: #E833BB;
+$Gray200 : #ECEEF0;
+$Gray300 :#E2E5E8;
+$Gray400 :#D4D8DC;
+$Gray500 :#B5B9BD;
+$Gray600 : #8E9398;
+$Gray700 : #505458;
+$Gray800: #3A3D40;
+$Gray900 : #252729;
+$FontSize40 : 10.6vw;
+$FontSize32 : 8.5vw;
+$FontSize24 : 6.4vw;
+$FontSize20 : 5.3vw;
+$FontSize16 : 4.2vw;
+$FontSize14 : 3.7vw;
+$FontSize12 : 3.2vw;
+$FontSize10 : 2.6vw;
+
+.account {
+    margin-top: $FontSize32;
+    height: calc(100vh - 31px - 200px);
+
+    .account_Top {
+        .aT_left {
+            gap: $FontSize16;
+
+            .icon {
+                width: 21.3vw;
+                height: 21.3vw;
+                background-color: $Gray200;
+                border-radius: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                i {
+                    font-size: $FontSize40;
+                    color: $Gray400;
+                }
+            }
+
+            .info {
+                text-align: left;
+
+                h3,
+                p {
+                    margin-bottom: 0;
+                }
+
+                h3 {
+                    font-weight: 700;
+                    font-size: $FontSize24;
+                    color: $Gray900;
+                    width: 30vw;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+
+                p {
+                    font-size: $FontSize12;
+                    color: $Gray600;
+                    font-weight: 400;
+                }
+            }
+        }
+
+        .pwdChange {
+            button {
+                background-color: transparent;
+                border: 1px solid $Gray600;
+                color: $Gray600;
+                padding: 8px 14px;
+                border-radius: 100px;
+                font-size: $FontSize12;
+                line-height: $FontSize16;
+            }
+        }
+    }
+
+    .account_Bottom {
+        margin-top: $FontSize32;
+
+        ul {
+            padding-left: 0;
+
+            li {
+                padding: $FontSize14 4px;
+                border-bottom: 1px solid $Gray300;
+                text-align: left;
+
+                .aB_left {
+                    gap: $FontSize14;
+
+                    i {
+                        font-size: $FontSize24;
+                        color: $Gray700;
+                    }
+
+                    p {
+                        margin-bottom: 0;
+                        font-size: $FontSize14;
+                        color: $Gray700;
+                    }
+
+                    button {
+                        font-size: $FontSize14;
+                        color: $Gray700;
+                    }
+                }
+
+                button {
+                    border: none;
+                    background-color: transparent;
+                    font-size: $FontSize16;
+                    padding: 0;
+                }
+            }
+        }
+
+        .accordion-body {
+            padding: 1rem 1.25rem 0 1.25rem;
+
+            ul {
+                li {
+                    padding: 1vw 0;
+                }
+            }
+        }
+
+        .accordion-button:focus {
+            outline: none !important;
+        }
+
+        .collapsed:focus {
+            outline: none !important;
+        }
+
+
+    }
+}
+
+.pwdOG {
+    min-height: calc(100vh - 60vw);
+    margin-bottom: 10vw;
+
+
+    .pwdHeader {
+        gap: $FontSize12;
+        margin-bottom: 12vw;
+
+        button {
+            background-color: transparent;
+            border: none;
+
+            i {
+                font-size: $FontSize16;
+                color: $Gray700;
+            }
+        }
+
+        h5 {
+            font-size: $FontSize20;
+            margin-bottom: 0;
+            font-weight: 700;
+            color: $Gray700;
+        }
+    }
+
+    .OGBlock {
+        margin-bottom: 35.7vw;
+
+        h3 {
+            font-size: $FontSize24;
+            font-weight: 700;
+            margin-bottom: 0;
+            text-align: left;
+            color: $Gray900;
+            margin-bottom: 12.2vw;
+        }
+
+        .col-12 {
+            text-align: left;
+
+            label {
+                margin-bottom: $FontSize14;
+                font-size: $FontSize12;
+                font-weight: 400;
+                color: $Gray600;
+            }
+
+            input {
+                font-size: $FontSize16;
+                color: $Gray900;
+                border: none;
+                border-bottom: 1px solid $Gray300;
+                line-height: $FontSize24;
+                padding: $FontSize14 0;
+                padding-left: 3vw;
+
+                &::placeholder {
+                    color: $Gray500;
+                }
+            }
+
+        }
+    }
+
+    .pwdBtn {
+        position: absolute;
+        bottom: 0vh;
+        width: calc(100% - $FontSize20 - $FontSize20) !important;
+
+        button {
+            width: calc(100%);
+            height: 15vw;
+            gap: 6px;
+            background-color: $Gray500;
+            color: $white;
+            border: none;
+            border-radius: 10px;
+            padding: 2.1vw 4.8vw;
+            position: sticky;
+            left: $FontSize20;
+            bottom: $FontSize20;
+            font-size: $FontSize16;
+            transition: 1s all;
+
+        }
+
+        button.active {
+            background-color: $active;
+        }
+    }
+}
+
+.inquiry {
+    text-align: left;
+    min-height: calc(100vh - 80vw);
+    gap: $FontSize24;
+
+    label {
+        margin-bottom: $FontSize14;
+        font-size: $FontSize12;
+        font-weight: 400;
+        color: $Gray600;
+
+    }
+
+    input {
+        font-size: $FontSize16;
+        color: $Gray900;
+        line-height: $FontSize24;
+        border: 1px solid $Gray300;
+        padding: $FontSize12 $FontSize16;
+        border-radius: 10px;
+
+        &::placeholder {
+            color: $Gray500;
+        }
+    }
+
+    textarea {
+        font-size: $FontSize16;
+        color: $Gray900;
+        line-height: $FontSize24;
+        border: 1px solid $Gray300;
+        padding: $FontSize12 $FontSize16;
+        border-radius: 10px;
+        min-height: 25vh;
+
+        &::placeholder {
+            color: $Gray500;
+        }
+    }
+
+}
+
+.modify {
+    gap: $FontSize16;
+
+    .icon {
+        width: 21.3vw;
+        height: 21.3vw;
+        background-color: $Gray200;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: $FontSize12;
+        background-size: cover;
+
+        i {
+            font-size: $FontSize40;
+            color: $Gray400;
+        }
+
+        .upload {
+            background-color: #000;
+            border-radius: 100%;
+            bottom: 0;
+            right: 0;
+
+            button {
+                background-color: #000;
+                border: none;
+                border-radius: 100%;
+
+                padding: 0;
+                position: relative;
+                width: 8vw;
+                height: 8vw;
+            }
+
+            input {
+                width: 8vw;
+                height: 8vw;
+                opacity: 0;
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-radius: 100%;
+            }
+
+            i {
+                font-size: $FontSize12;
+                border-radius: 100%;
+                color: $white;
+            }
+        }
+    }
+
+    label {
+        margin-bottom: 1vw;
+        font-size: $FontSize12;
+        font-weight: 400;
+        color: $Gray600;
+
+    }
+
+    input {
+        font-size: $FontSize16;
+        color: $Gray900;
+        line-height: $FontSize24;
+        border: 1px solid $Gray300;
+        padding: $FontSize12 $FontSize16;
+        border-radius: 10px;
+
+        &::placeholder {
+            color: $Gray500;
+        }
+    }
+}
+
+.modifyBtn {
+    position: absolute;
+    bottom: 0vh;
+    width: calc(100% - $FontSize20 - $FontSize20) !important;
+
+    button {
+        width: calc(100%);
+        height: 15vw;
+        gap: 6px;
+        background-color: $Gray500;
+        color: $white;
+        border: none;
+        border-radius: 10px;
+        padding: 2.1vw 4.8vw;
+        position: sticky;
+        left: $FontSize20;
+        bottom: $FontSize20;
+        font-size: $FontSize16;
+        transition: 1s all;
+
+    }
+
+    button.active {
+        background-color: $active;
+    }
+}
+
+.toggle-switch {
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    height: 34px;
+}
+
+.toggle-input {
+    display: none;
+}
+
+.toggle-label {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    border: 3px solid #3a3d40;
+    border-radius: 34px;
+    transition: background-color 0.3s;
+}
+
+.toggle-label:before {
+    content: "";
+    position: absolute;
+    height: 3.5vw;
+    width: 3.5vw;
+    left: 4px;
+    bottom: 1vw;
+    background-color: #3a3d40;
+    border-radius: 50%;
+    transition: transform 0.5s;
+}
+
+.toggle-input:checked+.toggle-label {
+    background-color: #3a3d40;
+}
+
+.toggle-input:checked+.toggle-label:before {
+    background-color: #fff;
+}
+
+.toggle-input:checked+.toggle-label:before {
+    transform: translateX(22px);
+}

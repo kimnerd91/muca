@@ -1,0 +1,310 @@
+$backgroundWhite : #fff;
+$backgroundGray : #F8F9FA;
+$gradation: linear-gradient(40deg, rgba(242, 76, 249, 1) 0%, rgba(160, 74, 255, 1) 31%, rgba(36, 94, 255, 1) 69%, rgba(48, 177, 255, 1) 100%);
+$active : #6F64FF;
+$unactive: #B5B9BD;
+$white: #FFFFFF;
+$notify: #E833BB;
+$Gray200 : #ECEEF0;
+$Gray300 :#E2E5E8;
+$Gray400 :#D4D8DC;
+$Gray500 :#B5B9BD;
+$Gray600 : #8E9398;
+$Gray700 : #505458;
+$Gray800: #3A3D40;
+$Gray900 : #252729;
+$FontSize40 : 10.6vw;
+$FontSize32 : 8.5vw;
+$FontSize24 : 6.4vw;
+$FontSize20 : 5.3vw;
+$FontSize16 : 4.2vw;
+$FontSize14 : 3.7vw;
+$FontSize12 : 3.2vw;
+$FontSize10 : 2.6vw;
+
+.joinHeader {
+    margin-top: $FontSize20;
+    gap: 29.6vw;
+    margin-bottom: 11.7vw;
+    align-items: center;
+
+    button {
+        background-color: transparent;
+        border: none;
+
+        i {
+            font-size: $FontSize16;
+        }
+    }
+
+    .logobox {
+        width: 100%;
+    }
+}
+
+.Login {
+    gap: $FontSize24;
+    min-height: 72vh;
+
+    label {
+
+        font-size: $FontSize12;
+        font-weight: 400;
+        color: $Gray600;
+
+    }
+
+    .alert {
+
+        padding: 2vw;
+        padding-left: 1vw;
+    }
+
+    input {
+        font-size: $FontSize16;
+        color: $Gray900;
+        line-height: $FontSize24;
+        border: none;
+        border-bottom: 1px solid $Gray400;
+        padding: $FontSize12 2.2vw;
+
+        background-color: transparent;
+
+        &::placeholder {
+            color: $Gray500;
+        }
+    }
+
+    input:focus {
+        border-bottom: 1px solid $active;
+        outline: none
+    }
+
+    .autoLogin {
+        gap: $FontSize12;
+
+
+        p {
+            margin-bottom: 0;
+            font-size: $FontSize16;
+            font-weight: 400;
+            color: $Gray500;
+        }
+
+        .custom-checkbox {
+            width: $FontSize24;
+            height: $FontSize24;
+            border-radius: 50%;
+            border: 1px solid $Gray500;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .checkbox-inner {
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.5s all;
+        }
+
+        .checkbox-inner i {
+            color: $Gray500;
+            font-size: $FontSize12;
+            display: block;
+            margin-top: 3px;
+        }
+
+        .checked .checkbox-inner {
+            background-color: $active;
+            /* 체크 상태일 때의 배경 색상 */
+            border-color: $active;
+            /* 테두리 색상도 변경 */
+            color: #fff;
+            /* 체크 마크 색상 변경 */
+
+            i {
+                color: $white;
+            }
+        }
+    }
+
+    .routerDiv {
+        gap: 7.4vw $FontSize20;
+
+        p {
+            color: $Gray700;
+            margin-bottom: 0;
+            font-size: $FontSize16;
+            font-weight: 400;
+            line-height: $FontSize24;
+        }
+    }
+
+    .termsDiv {
+        gap: $FontSize16;
+
+        .checkboxDiv {
+            gap: $FontSize12;
+
+            button {
+                background-color: transparent;
+                border: none;
+            }
+
+            p {
+                margin-bottom: 0;
+                color: $Gray500;
+                font-size: $FontSize16;
+                
+            }
+
+            p.active {
+                color: $Gray800
+            }
+
+            .custom-checkbox {
+                width: $FontSize20;
+                height: $FontSize20;
+                border-radius: 50%;
+                border: 1px solid $Gray500;
+                position: relative;
+                cursor: pointer;
+            }
+
+            .checkbox-inner {
+                width: 100%;
+                height: 100%;
+                background-color: #fff;
+                border-radius: 50%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: 0.5s all;
+            }
+
+            .checkbox-inner i {
+                color: $Gray500;
+                font-size: $FontSize12;
+                display: block;
+                margin-top: 3px;
+            }
+
+            .custom-checkbox.checked {
+                border-color: #6F64FF;
+                background-color: #6F64FF;
+
+                i {
+                    color: $white!important;
+                }
+            }
+
+            .checked .checkbox-inner {
+                background-color: transparent;
+                /* 체크 상태일 때의 배경 색상 */
+                border-color: $Gray800;
+                /* 테두리 색상도 변경 */
+                color: $Gray800;
+                /* 체크 마크 색상 변경 */
+
+                i {
+                    color: $Gray800;
+                }
+            }
+        }
+    }
+
+    .joinBtn {
+
+        bottom: 5vw;
+        width: 100%;
+        left: 0;
+
+
+        button {
+            width: calc(100% - $FontSize20);
+            height: 15vw;
+            gap: 6px;
+            background-color: $Gray500;
+            color: $white;
+            border: none;
+            border-radius: 10px;
+            padding: 2.1vw 4.8vw;
+            position: sticky;
+            left: 0;
+            bottom: $FontSize20;
+            font-size: $FontSize16;
+            transition: 1s all;
+
+        }
+
+        button.active {
+            background-color: $active;
+        }
+    }
+
+    .joinBtnDouble {
+        position: absolute;
+        bottom: 5vw;
+        width: 100%;
+        left: 0;
+
+        button {
+            width: 42.9vw;
+            height: 15vw;
+            border-radius: 10px;
+            font-size: $FontSize16;
+            padding: 2.1vw 4.8vw;
+
+            &:first-child {
+                border: 1px solid $active;
+                color: $active;
+                background-color: transparent;
+            }
+
+            &:last-child {
+                border: 1px solid $Gray500;
+                background-color: $Gray500;
+                color: $white;
+
+                .active {
+                    border: 1px solid $active;
+                    background-color: $active;
+                }
+
+
+            }
+
+            &:last-child.active {
+                border: 1px solid $active;
+                background-color: $active;
+            }
+        }
+    }
+
+    .joinpage {
+        h5 {
+            text-align: left;
+            line-height: $FontSize32;
+            font-size: $FontSize24;
+            ;
+            color: $Gray900;
+
+            p {
+                text-align: left;
+                margin-bottom: 0;
+                font-weight: 700;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,60 @@
+$backgroundWhite : #fff;
+$backgroundGray : #F8F9FA;
+$gradation: linear-gradient(40deg, rgba(242, 76, 249, 1) 0%, rgba(160, 74, 255, 1) 31%, rgba(36, 94, 255, 1) 69%, rgba(48, 177, 255, 1) 100%);
+$active : #6F64FF;
+$unactive: #B5B9BD;
+$white: #FFFFFF;
+$notify: #E833BB;
+$Gray200 : #ECEEF0;
+$Gray300 :#E2E5E8;
+$Gray400 :#D4D8DC;
+$Gray500 :#B5B9BD;
+$Gray600 : #8E9398;
+$Gray700 : #505458;
+$Gray800: #3A3D40;
+$Gray900 : #252729;
+$FontSize40 : 10.6vw;
+$FontSize32 : 8.5vw;
+$FontSize24 : 6.4vw;
+$FontSize20 : 5.3vw;
+$FontSize16 : 4.2vw;
+$FontSize14 : 3.7vw;
+$FontSize12 : 3.2vw;
+$FontSize10 : 2.6vw;
+
+@media screen and (max-height: 756px) {
+    .card_Blank {
+        min-height: 50vh!important;
+
+        button {
+            padding: 0!important;
+        }
+    }
+    .card_Grid {
+        padding-bottom: 20vw;
+    }
+}
+
+@media screen and (min-height: 756px) and (max-height: 1024px) {
+    .card_Blank {
+        min-height: 50vh !important;
+
+        button {
+            padding: 0 !important;
+        }
+    }
+
+    .card_Grid {
+        padding-bottom: 20vw;
+    }
+
+    .card_Grid::-webkit-scrollbar {
+        display: none;
+    }
+
+    
+
+    .card_Grid ul::-webkit-scrollbar {
+        display: none;
+    }
+}

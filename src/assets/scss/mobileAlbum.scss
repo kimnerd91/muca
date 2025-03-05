@@ -1,0 +1,455 @@
+$backgroundWhite : #fff;
+$backgroundGray : #F8F9FA;
+$gradation: linear-gradient(40deg, rgba(242, 76, 249, 1) 0%, rgba(160, 74, 255, 1) 31%, rgba(36, 94, 255, 1) 69%, rgba(48, 177, 255, 1) 100%);
+$active : #6F64FF;
+$unactive: #B5B9BD;
+$white: #FFFFFF;
+$notify: #E833BB;
+$Gray200 : #ECEEF0;
+$Gray300 :#E2E5E8;
+$Gray400 :#D4D8DC;
+$Gray500 :#B5B9BD;
+$Gray600 : #8E9398;
+$Gray700 : #505458;
+$Gray800: #3A3D40;
+$Gray900 : #252729;
+$FontSize40 : 10.6vw;
+$FontSize32 : 8.5vw;
+$FontSize24 : 6.4vw;
+$FontSize20 : 5.3vw;
+$FontSize16 : 4.2vw;
+$FontSize14 : 3.7vw;
+$FontSize12 : 3.2vw;
+$FontSize10 : 2.6vw;
+
+.album {
+    margin-top: $FontSize20;
+
+    .albumHeader {
+        gap: $FontSize12;
+        margin-bottom: $FontSize20;
+
+        button {
+            background-color: transparent;
+            border: none;
+
+            i {
+                font-size: $FontSize16;
+                color: $Gray700;
+            }
+        }
+
+        h5 {
+            font-size: $FontSize20;
+            margin-bottom: 0;
+            font-weight: 700;
+            color: $Gray700;
+        }
+
+
+    }
+
+    .albuminfo {
+        padding: $FontSize12 0;
+
+        .info {
+            gap: $FontSize16;
+
+            img {
+                width: 11.73vw;
+                height: 11.73vw;
+                border-radius: 10px;
+            }
+
+            h5 {
+                font-size: $FontSize16;
+                font-weight: 700;
+                margin-bottom: 0;
+                text-align: left;
+            }
+
+            p {
+                font-size: $FontSize14;
+                font-weight: 400;
+                margin-bottom: 0;
+                text-align: left;
+            }
+        }
+
+        .date {
+            p {
+                color: $Gray600;
+                font-size: $FontSize12;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .tabs {
+        .tab {
+
+            padding: $FontSize12;
+            gap: 1.6vw;
+            text-align: center;
+            justify-content: center;
+            border-bottom: 1px solid $Gray500;
+
+
+            i {
+                font-size: $FontSize24;
+                margin-right: 0.53vw;
+                color: $Gray500;
+            }
+
+            h6 {
+                font-size: $FontSize16;
+                margin-bottom: 0;
+                color: $Gray500;
+            }
+
+            p {
+                font-size: $FontSize16;
+                margin-bottom: 0;
+                color: $Gray500;
+            }
+        }
+
+        .tab.active {
+            border-bottom: 2px solid $active;
+
+            i {
+                color: $Gray700;
+            }
+
+            h6 {
+                color: $Gray700;
+            }
+
+            p {
+                color: $active;
+            }
+
+        }
+    }
+}
+
+.albumTrack {
+    min-height: 65vh;
+    ;
+
+    .swiper-container {
+        padding-top: 6.6vw;
+
+        .swiper-wrapper {
+            .swiper-slide {
+                height: 118vw;
+                overflow: hidden;
+                background-size: 100% 100%!important;
+
+                .text {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.8vw;
+
+                    h3 {
+                        font-size: $FontSize20;
+                        font-weight: 700;
+                        margin-bottom: 0;
+
+                        span {
+                            &:last-child {
+                                width: 50vw;
+                                text-overflow: ellipsis;
+                                overflow: hidden;
+                            }
+                        }
+                    }
+
+                    h6 {
+                        color: $white;
+                        margin-bottom: 0;
+                        font-size: $FontSize14;
+                        font-weight: 400;
+                        line-height: normal;
+                    }
+
+                    p {
+                        margin-bottom: 0;
+                        font-size: $FontSize12;
+                        gap: 1vw;
+
+                        i {
+                            font-size: $FontSize12;
+                        }
+                    }
+                }
+            }
+        }
+
+
+    }
+}
+
+.albumVideo {
+    min-height: 65vh;
+    ;
+
+    .swiper-container {
+        padding-top: 6.6vw;
+
+        .swiper-wrapper {
+            .swiper-slide {
+                height: 118vw;
+                padding: 0 !important;
+                flex-direction: column;
+
+                .thumbnail {
+                    width: 100%;
+                    padding: 10vw 0 !important;
+
+                    img {
+                        width: 100%;
+                        max-height: 50vw;
+                    }
+                }
+
+                .text {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.8vw;
+                    white-space: nowrap;
+                    width: calc(100% - 5vw);
+                    overflow-x: hidden;
+
+                    h3 {
+                        font-size: $FontSize20;
+                        font-weight: 700;
+                        margin-bottom: 0;
+                        width: calc(100% - 40vw);
+                        /* Adjust the width to account for padding */
+
+
+                    }
+
+                    .larger {
+                        animation: slideLeft 10s linear infinite;
+                        animation-delay: 5s;
+
+                    }
+
+
+
+
+                    @keyframes slideLeft {
+                        0% {
+                            transform: translateX(100%);
+                        }
+
+                        /* Start position */
+                        100% {
+                            transform: translateX(-100%);
+                        }
+
+                        /* End position */
+                    }
+
+
+                    h6 {
+                        color: $white;
+                        margin-bottom: 0;
+                        font-size: $FontSize14;
+                        font-weight: 400;
+                        line-height: normal;
+                    }
+
+                    p {
+                        margin-bottom: 0;
+                        font-size: $FontSize12;
+                        gap: 1vw;
+
+                        i {
+                            font-size: $FontSize12;
+                        }
+                    }
+                }
+            }
+        }
+
+
+    }
+}
+
+//플레이어 마진 레프트 제거, + 상위 div 센터로
+
+//영상탭 justify-content-center ->around
+
+
+.imgbox {
+height: 65vh;
+position: relative;
+z-index: 99999;
+
+    ul {
+        padding-left: 0 !important;
+        overflow-y: scroll;
+
+        li {
+            width: 49%;
+            margin-bottom: 5px;
+            img {
+                width: 49.86vw;
+                height: 49.86vw;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .vel-modal {
+        top: unset !important;
+        height: 100vh;
+        top: -22vh;
+        background: rgba(0,0,0,1)!important;
+
+       
+
+        .vel-img-wrapper {
+            width: 100%;
+            img {
+                width: 100%;
+            }
+            .vel-img {
+             
+            }
+        }
+
+        .vel-img-title {
+            bottom: 16vh;
+        }
+        .vel-toolbar {
+            display: none!important;
+        }
+    }
+}
+
+.playerDiv {
+
+    height: 100vh;
+
+    .px-4 {
+        flex-direction: column;
+        display: flex;
+        justify-content: space-between;
+        height: 100vh;
+    }
+
+    .playerHeader {
+        z-index: 99;
+        padding-top: $FontSize20;
+        position: relative;
+
+        button {
+            background-color: transparent;
+            border: none;
+            gap: 2vw;
+
+            i {
+                color: $white;
+            }
+
+            span {
+                color: $white;
+                font-size: $FontSize12;
+                font-weight: 400;
+            }
+        }
+    }
+
+    .opacity {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.3) 100%);
+        border-radius: 0px;
+    }
+
+    .playerControl {
+        z-index: 99;
+        position: relative;
+        margin-bottom: 11.7vw;
+
+        button {
+            background-color: transparent;
+            border: none;
+
+            span {
+                color: $white;
+                margin-left: 1px;
+                font-size: 16px;
+                position: absolute;
+                bottom: 0;
+                left: 5.5vw;
+            }
+        }
+
+        div {
+            h3 {
+                color: $white;
+                letter-spacing: 1px;
+                margin-bottom: 3vw;
+                font-weight: bold;
+
+            }
+
+            p {
+                color: $white;
+            }
+
+            i {
+                color: $white;
+                font-size: $FontSize16;
+            }
+        }
+
+        .mainControl {
+            gap: $FontSize20;
+
+            i {
+                font-size: $FontSize20;
+            }
+
+            .playAndpause {
+                i {
+                    font-size: 7.4vw;
+                }
+            }
+
+        }
+
+        .progressBar {
+            margin: $FontSize20 $FontSize20 0 $FontSize20;
+
+            height: 1.6vw;
+            background-color: rgba(0, 0, 0, 0.2);
+            margin-bottom: 11.7vw;
+
+            .progress {
+
+                background-color: rgba(0, 0, 0, 0.2);
+                height: 1.6vw;
+                width: 100%;
+
+
+            }
+
+
+            span {
+                color: $white;
+                font-size: $FontSize12;
+                font-weight: 400;
+                margin-top: 1.6vw;
+            }
+        }
+    }
+}

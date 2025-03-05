@@ -1,0 +1,289 @@
+$backgroundWhite : #fff;
+$backgroundGray : #F8F9FA;
+$gradation: linear-gradient(40deg, rgba(242, 76, 249, 1) 0%, rgba(160, 74, 255, 1) 31%, rgba(36, 94, 255, 1) 69%, rgba(48, 177, 255, 1) 100%);
+$active : #6F64FF;
+$unactive: #B5B9BD;
+$white: #FFFFFF;
+$notify: #E833BB;
+$Gray200 : #ECEEF0;
+$Gray300 :#E2E5E8;
+$Gray400 :#D4D8DC;
+$Gray500 :#B5B9BD;
+$Gray600 : #8E9398;
+$Gray700 : #505458;
+$Gray900 : #252729;
+$Gray950 : #171717;
+$FontSize40 : 10.6vw;
+$FontSize32 : 8.5vw;
+$FontSize24 : 6.4vw;
+$FontSize20 : 5.3vw;
+$FontSize16 : 4.2vw;
+$FontSize14 : 3.7vw;
+$FontSize12 : 3.2vw;
+$FontSize10 : 2.6vw;
+
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-size: 1rem;
+    // background-color: $backgroundGray !important;
+    font-family: 'Pretendard-Regular', Avenir, Helvetica, Arial, sans-serif;
+    /* Corrected font-family */
+
+}
+
+#app {
+    font-family: 'Pretendard-Regular', Avenir, Helvetica, Arial, sans-serif;
+    /* Corrected font-family */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    // background-color: $backgroundGray;
+}
+
+nav {
+    padding: 30px;
+    height: 60px;
+
+    a {
+        font-weight: bold;
+        color: #2c3e50;
+
+        &.router-link-exact-active {
+            color: #42b983;
+        }
+    }
+}
+
+a {
+    text-decoration: none !important;
+}
+
+ul {
+    padding-left: 0;
+
+    li {
+        list-style: none;
+    }
+}
+
+.pl-0 {
+    padding-left: 0 !important;
+}
+
+.modal {
+    .modal-body {
+        padding: 15vw 5vw 12vw 5vw;
+
+        p {
+            margin-bottom: 0 !important;
+        }
+    }
+
+    .modal-footer {
+        padding: 0;
+
+        button {
+            background-color: transparent;
+            color: $Gray900;
+            width: 100%;
+            padding: $FontSize10 0;
+
+
+
+            &:active {
+                color: $active;
+                outline: transparent;
+            }
+        }
+
+    }
+}
+
+
+
+.lyrics {
+    top: 20vw !important;
+
+    .lyricDialog {
+        align-items: start !important;
+
+
+        .lyricModal {
+            height: 75vh;
+            background-color: rgba(0, 0, 0, 0.5);
+
+            p {
+                color: $white;
+                line-height: inherit;
+                text-align: left;
+            }
+            textarea {
+                color: $white;
+                line-height: inherit;
+                text-align: left;
+                background-color: transparent;
+                border: none;
+                width: 100%;
+                height: 100%;resize: none;
+
+                &:focus {
+                    outline: none;
+                }
+                
+            }
+            
+        }
+    }
+}
+
+.accordion-item {
+    border: none!important;
+}
+.accordion-item:first-of-type>.accordion-header .accordion-button {
+    border: none!important;
+    
+}
+.accordion-button:not(.collapsed)::after {
+    background-image: none!important;
+}
+.accordion-button:not(.collapsed) {
+    box-shadow: none!important;
+}
+.accordion-button::after {
+    background-image: none!important;
+}
+.accordion-body ul li {
+    border: none!important;
+
+}
+
+.longTextModal {
+    background-color: rgba(0, 0, 0, 0.8)!important;
+    height: 80vh;
+    
+    .modal-header {
+        h5 {
+            color: #fff;
+        }
+    }
+    .modal-body {
+        padding: 5vw 5vw;
+        textarea {
+            color: #fff;
+            background-color: transparent;
+            border: none;
+            width: 100%;
+            text-align: left;
+            height: 100%;
+        }
+    }
+    .modal-footer {
+        button {
+            color: #fff;
+            border-color: #fff;
+        }
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: $Gray950;
+    }
+}
+
+@media screen and (min-width:767px) and (max-width: 1024px) {
+
+    .modal-dialog {
+        max-width: 80vw !important;
+    }
+
+    .longTextModal::-webkit-scrollbar {
+        display: none;
+    }
+
+    .longTextModal .modal-body::-webkit-scrollbar {
+        display: none;
+    }
+
+    .longTextModal .modal-body textarea {
+        font-size: 2vw;
+    }
+
+    .longTextModal .modal-body textarea::-webkit-scrollbar {
+        display: none;
+    }
+
+
+    .lyricModal .modal-body::-webkit-scrollbar {
+        display: none;
+    }
+
+    .lyricModal .modal-body textarea::-webkit-scrollbar {
+        display: none;
+    }
+
+    .longTextModal .modal-header h5 {
+        font-size: $FontSize12;
+        margin-left: 2vw;
+    }
+
+    .longTextModal .modal-footer button {
+        font-size: $FontSize10;
+    }
+
+    .lyrics {
+        top: 10vw !important;
+
+        .lyricDialog {
+            align-items: start !important;
+            max-width: 80vw!important;
+
+
+            .lyricModal {
+                height: 75vh;
+                background-color: rgba(0, 0, 0, 0.5);
+
+                p {
+                    color: $white;
+                    line-height: inherit;
+                    text-align: left;
+                }
+
+                textarea {
+                    color: $white;
+                    line-height: inherit;
+                    text-align: left;
+                    background-color: transparent;
+                    border: none;
+                    width: 100%;
+                    height: 100%;
+                    resize: none;
+                    font-size: $FontSize10;
+
+                    &:focus {
+                        outline: none;
+                    }
+
+                }
+
+                .modal-body {
+                    padding: 5vw;
+                }
+
+            }
+        }
+    }
+
+}

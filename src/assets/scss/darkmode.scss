@@ -1,0 +1,280 @@
+$backgroundWhite : #fff;
+$backgroundGray : #F8F9FA;
+$gradation: linear-gradient(40deg, rgba(242, 76, 249, 1) 0%, rgba(160, 74, 255, 1) 31%, rgba(36, 94, 255, 1) 69%, rgba(48, 177, 255, 1) 100%);
+$active : #6F64FF;
+$unactive: #B5B9BD;
+$white: #FFFFFF;
+$notify: #E833BB;
+$Gray200 : #ECEEF0;
+$Gray300 :#E2E5E8;
+$Gray400 :#D4D8DC;
+$Gray500 :#B5B9BD;
+$Gray600 : #8E9398;
+$Gray700 : #505458;
+$Gray800: #3A3D40;
+$Gray900 : #252729;
+$Gray950 : #171717;
+$FontSize40 : 10.6vw;
+$FontSize32 : 8.5vw;
+$FontSize24 : 6.4vw;
+$FontSize20 : 5.3vw;
+$FontSize18 : 4.8vw;
+$FontSize16 : 4.2vw;
+$FontSize14 : 3.7vw;
+$FontSize12 : 3.2vw;
+$FontSize10 : 2.6vw;
+$FontSize8 : 2.1vw;
+
+:root[color-theme='light'] {
+    --background: #fff;
+    --boxColor: #000;
+}
+
+:root[color-theme='dark'] {
+    --background: #000;
+    --boxColor: #fff;
+}
+
+html {
+    background: $Gray950;
+
+    body {
+        background:$Gray950;
+
+        .fixedNav {
+            background-color: $Gray950;
+            .playerBox {
+                background-color: $Gray900;
+                .player {
+                     background-color: $Gray900;
+                     .InfoBox {
+                        p {
+                            color: $backgroundGray;
+                        }
+                     }
+                     .controlBox {
+                        button {
+                            color: $backgroundGray;
+                        }
+                     }
+                }
+            }
+            ul {
+                li {
+                    i {
+                        color: $Gray700;
+                    }
+                }
+            }
+        }
+        .maintab {
+            ul {
+                li {
+                    i {
+                        color: $Gray700;
+                    }
+                }
+            }
+            .custom-select {
+                background-color: transparent;
+                .custom-select-trigger {
+                    background-color: transparent;
+                    color: $Gray700;
+                }
+                .custom-options {
+                    background-color: $Gray900;
+                    color: $Gray500;
+                }
+            }
+        }
+        .mainCard {
+            .card_Blank {
+                border: 2px dashed $Gray600;
+            }
+            .card_list {
+                ul {
+                    li {
+                        .text {
+                            h5, h6 {
+                                color: $white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .account {
+            .account_Top {
+                .aT_left {
+                    .icon {
+                        background-color: $Gray900;
+
+                        i {
+                            color: $Gray950;
+                        }
+                    }
+                    .info {
+                        h3 {
+                            color: $white;
+                        }
+                        p {
+                            color: $Gray700;
+                        }
+                    }
+                }
+                .pwdChange {
+                    button {
+                        border: 1px solid $Gray600
+                    }
+                }
+            }
+            .account_Bottom {
+                ul {
+                    li {
+                        a {
+                            button {
+                                color: $Gray500;
+                            }
+                        }
+                        span {
+                            color: $Gray700;
+                        }
+                        .aB_left {
+                            p {
+                                color: $Gray500;
+                            }
+                            i {
+                                color: $Gray500;
+                            }
+                            button {
+                                color: $Gray500;
+                            }
+                            .accordion-item {
+                                background-color: transparent;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .guide {
+            padding-bottom: 0;
+            .guideheader {
+                position: absolute;
+            }
+        }
+
+        .inquiry {
+            input {
+                 background-color: $Gray950;
+                 border: 1px solid $Gray500;
+                 color: $Gray300;
+            }
+            textarea {
+                background-color: $Gray950;
+                border: 1px solid $Gray500;
+                color: $Gray300;
+            }
+        }
+
+        .pwdOG {
+            .OGBlock {
+                h3 {
+                    color: $white;
+                }
+                 input {
+                     background-color: $Gray950;
+                     border: 1px solid $Gray500;
+                     color: $Gray300;
+                 }
+            }
+            .pwdHeader {
+                h5 {
+                    color: $Gray600;
+                }
+                button {
+                    i {
+                        color: $Gray600;
+                    }
+                }
+            }
+            .pwdBtn {
+                button {
+                    background-color: $Gray800;
+                }
+            }
+        }
+        .modify {
+            .icon {
+                background-color: $Gray900;
+
+                i {
+                    color: $Gray950;
+                }
+            }
+            input {
+                background-color: $Gray950;
+                border: 1px solid $Gray500;
+                color: $Gray300;
+            }
+            .modifyBtn {
+                button {
+                    background-color: $Gray800;
+                }
+            }
+        }
+        .notify {
+            background-color: $Gray950;
+
+             .notifyHeader {
+                 h5 {
+                     color: $Gray600;
+                 }
+
+                 button {
+                     i {
+                         color: $Gray600;
+                     }
+                 }
+             }
+
+           .list {
+            ul {
+                li {
+                     h5 {
+                         color: $white;
+                     }
+
+                     p {
+                         color: $Gray600;
+                     }
+                }
+            }
+           }
+           .board {
+             h3 {
+                 color: $white;
+             }
+             h6 {
+                color: $Gray700;
+             }
+
+             p {
+                 color: $Gray600;
+             }
+           }
+        }
+        .longTextModal {
+            background-color: $Gray900!important;
+            padding: 2vw 0;
+        }
+        .qrcode {
+            .scan {
+                button {
+                    background-color: $Gray800;
+                    color: $white
+                }
+            }
+        }
+    }
+}
